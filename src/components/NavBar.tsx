@@ -26,6 +26,24 @@ const Navbar = () => {
           >
             Portfolios
           </NavLink>
+          <NavLink 
+            to="/register" 
+            style={({ isActive }) => ({
+              ...styles.link,
+              ...(isActive ? styles.activeLink : {})
+            })}
+          >
+            Register
+          </NavLink>
+          <NavLink 
+            to="/login" 
+            style={({ isActive }) => ({
+              ...styles.link,
+              ...(isActive ? styles.activeLink : {})
+            })}
+          >
+            Login
+          </NavLink>
         </div>
       </div>
     </nav>

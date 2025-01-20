@@ -9,9 +9,11 @@ const COIN_NAMES: Record<string, string> = {
   BTC: 'Bitcoin',
   ETH: 'Ethereum',
   SOL: 'Solana',
-  XRP: 'XRP'
+  XRP: 'XRP',
+  TETHER: "USDT",
+  BNB: "BNB"
 };
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 function CryptoPrices() {
   const [prices, setPrices] = useState<Record<string, number> | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -20,7 +22,7 @@ function CryptoPrices() {
   useEffect(() => {
     async function fetchPrices() {
       try {
-        const response = await fetch('http://localhost:8000/coins/prices?ids=BTC,ETH,SOL,XRP');
+        const response = await fetch('http://localhost:8000/coins/prices?ids=BTC,ETH,SOL,XRP,USDT,BNB');
         if (!response.ok) {
           throw new Error(`Erro ${response.status}: ${response.statusText}`);
         }

@@ -1,6 +1,7 @@
 import CryptoPrices from "../components/CryptoPrices";
 
 const Portfolios = () => {
+    
     return (
       <div>
         
