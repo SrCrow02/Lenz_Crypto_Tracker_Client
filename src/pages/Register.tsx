@@ -1,8 +1,8 @@
 import { useState } from "react";
-
+import '../public/css/Register.css'
 const Register = () => {
     const [registerData, setRegisterData] = useState(null);
-    const [error, setError] = useState(null); 
+    const [error, setError] = useState<string | null>(null); 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
@@ -29,16 +29,18 @@ const Register = () => {
             const data = await response.json();
             setRegisterData(data); 
         } catch (err) {
-            setError(error); 
+            setError(err instanceof Error ? err.message : 'An error occurred'); 
         }
     };
 
     return (
-        <div>
-            {error && <div>Error: {error}</div>} {/* Display error if present */}
+        <div className="register-container">
+            <h2>Register</h2>
+            
+            {error && <div className="error-message">Error: {error}</div>}
 
-            <form onSubmit={handleSubmit}>
-                <div>
+            <form onSubmit={handleSubmit} className="register-form">
+                <div className="form-group">
                     <label>Email:</label>
                     <input 
                         type="email" 
@@ -47,7 +49,7 @@ const Register = () => {
                         required 
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Password:</label>
                     <input 
                         type="password" 
@@ -56,7 +58,7 @@ const Register = () => {
                         required 
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Name:</label>
                     <input 
                         type="text" 
@@ -65,7 +67,7 @@ const Register = () => {
                         required 
                     />
                 </div>
-                <div>
+                <div className="form-group">
                     <label>Address:</label>
                     <input 
                         type="text" 
@@ -74,18 +76,17 @@ const Register = () => {
                         required 
                     />
                 </div>
-                <button type="submit">Register</button>
+                <button type="submit" className="register-button">Register</button>
             </form>
 
-            <div>
-                {registerData ? (
-                    <pre>{JSON.stringify(registerData, null, 2)}</pre> 
-                ) : (
-                    <p>Loading...</p> 
-                )}
-            </div>
+            {registerData && (
+                <div className="register-data">
+                    <h3>Registration Successful!</h3>
+                    <pre>{JSON.stringify(registerData, null, 2)}</pre>
+                </div>
+            )}
         </div>
     );
 };
-  
+
 export default Register;

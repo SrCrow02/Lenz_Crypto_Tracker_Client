@@ -1,0 +1,140 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15; /* Corrige o line-height padrão */
+  -webkit-text-size-adjust: 100%; /* Evita ajustes de tamanho de texto em dispositivos móveis */
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Melhora a renderização de fontes no macOS */
+}
+
+a {
+  background-color: transparent; /* Remove o fundo cinza em alguns navegadores */
+  text-decoration: none; /* Remove sublinhado padrão */
+  color: inherit; /* Herda a cor do texto do elemento pai */
+}
+
+img {
+  border-style: none; /* Remove bordas em imagens dentro de links */
+  max-width: 100%; /* Garante que imagens não ultrapassem o contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* Herda a fonte do body */
+  font-size: 100%; /* Tamanho de fonte consistente */
+  line-height: 1.15; /* Line-height consistente */
+  margin: 0; /* Remove margens padrão */
+}
+
+button,
+input {
+  overflow: visible; /* Corrige overflow no IE */
+}
+
+button,
+select {
+  text-transform: none; /* Remove transformação de texto em botões e selects */
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* Corrige estilos de botão no Safari */
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none; /* Remove borda interna no Firefox */
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; /* Adiciona outline para acessibilidade no Firefox */
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; /* Espaçamento consistente para fieldset */
+}
+
+legend {
+  color: inherit; /* Herda a cor do texto */
+  display: table; /* Corrige alinhamento no IE */
+  max-width: 100%; /* Evita overflow */
+  white-space: normal; /* Corrige quebra de linha no IE */
+}
+
+progress {
+  vertical-align: baseline; /* Corrige alinhamento no IE */
+}
+
+textarea {
+  overflow: auto; /* Remove barra de rolagem padrão no IE */
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* Corrige box-sizing no IE */
+  padding: 0; /* Remove padding padrão */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; /* Corrige altura no Chrome */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield; /* Corrige aparência no Chrome/Safari */
+  outline-offset: -2px; /* Corrige outline no Chrome */
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; /* Remove decoração padrão no Chrome/Safari */
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* Corrige aparência no Chrome/Safari */
+  font: inherit; /* Herda a fonte do body */
+}
+
+details {
+  display: block; /* Corrige display no Edge/IE */
+}
+
+summary {
+  display: list-item; /* Corrige display no Edge/IE */
+}
+
+template {
+  display: none; /* Esconde elementos template */
+}
+
+[hidden] {
+  display: none; /* Esconde elementos com atributo hidden */
+}
+
+body {
+    background-color: #242424;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}

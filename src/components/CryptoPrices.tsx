@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-// Atualizando o tipo para refletir a estrutura real da API
 type ApiResponse = {
   coinPrices: Record<string, number>;
 };
@@ -13,7 +12,7 @@ const COIN_NAMES: Record<string, string> = {
   TETHER: "USDT",
   BNB: "BNB"
 };
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
 function CryptoPrices() {
   const [prices, setPrices] = useState<Record<string, number> | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -88,11 +87,15 @@ function CryptoPrices() {
           margin: 0 auto;
           padding: 20px;
           font-family: system-ui, -apple-system, sans-serif;
+          background-color: #1a1a1a; 
+          color: #ffffff; 
+          border-radius: 8px;
+          border: 1px solid #333333; 
         }
 
         h1 {
           text-align: center;
-          color: #333;
+          color: #00ff88; /* Título em verde neon */
           margin-bottom: 30px;
         }
 
@@ -106,8 +109,8 @@ function CryptoPrices() {
         .spinner {
           width: 30px;
           height: 30px;
-          border: 3px solid #f3f3f3;
-          border-top: 3px solid #3498db;
+          border: 3px solid #333333; 
+          border-top: 3px solid #00ff88; 
           border-radius: 50%;
           animation: spin 1s linear infinite;
           margin-bottom: 10px;
@@ -119,8 +122,8 @@ function CryptoPrices() {
         }
 
         .error {
-          background-color: #ffebee;
-          color: #c62828;
+          background-color: #c62828;
+          color: #ffffff; 
           padding: 15px;
           border-radius: 4px;
           margin: 10px 0;
@@ -137,19 +140,19 @@ function CryptoPrices() {
           justify-content: space-between;
           align-items: center;
           padding: 15px;
-          background-color: #f8f9fa;
+          background-color: #2a2a2a; 
           border-radius: 4px;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
         }
 
         .coin-name {
           font-weight: 500;
-          color: #2c3e50;
+          color: #00ff88; 
         }
 
         .price {
           font-family: monospace;
-          color: #2c3e50;
+          color: #ffffff;
         }
       `}</style>
     </div>

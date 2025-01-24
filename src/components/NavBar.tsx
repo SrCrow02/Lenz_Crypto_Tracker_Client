@@ -52,8 +52,8 @@ const Navbar = () => {
 
 const styles = {
   nav: {
-    backgroundColor: '#ffffff',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    backgroundColor: '#1a1a1a',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.3)', 
     padding: '1rem',
   },
   content: {
@@ -67,20 +67,22 @@ const styles = {
     fontSize: '1.5rem',
     fontWeight: 'bold',
     textDecoration: 'none',
-    color: '#333',
+    color: '#00ff88', 
   },
   links: {
     display: 'flex',
-    gap: '1rem',
+    gap: '1.5rem', 
   },
   link: {
     textDecoration: 'none',
-    color: '#666',
+    color: '#b3b3b3',
     padding: '0.5rem',
+    transition: 'color 0.3s ease', 
   },
   activeLink: {
-    color: '#333',
+    color: '#00ff88', 
     fontWeight: '500',
+    borderBottom: '2px solid #00ff88', 
   },
 };
 
